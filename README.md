@@ -6,6 +6,8 @@ Créer un dossier `exercice-git` sur votre disque
 
 Dans un terminal comme Git Bash, utiliser la commande git pour créer un nouveau repository dans `exercice-git`
 
+> git init
+
 ## Créer un commit initial
 
 Une fois le dépôt créé, ajouter un fichier `contact.yaml` dans le répertoire `exercice-git` avec le contenu suivant :
@@ -18,6 +20,10 @@ contact:
 ```
 
 Ajouter cette modification au staging area, puis créer votre commit initial avec comme message `feat: contact.yaml`
+
+> git add contact.yaml
+
+> git commit -m "feat: contact.yaml"
 
 ## Ajouter des modifications
 
