@@ -78,3 +78,5 @@ Utiliser la commande `git reset HEAD~1 --hard` pour annuler le dernier commit et
 Utiliser la commande `git show` pour afficher le patch du dernier commit
 
 Utiliser la commande `git diff` pour afficher les 2 derniers commits qui portent sur `contact.yaml` (ceux qui ont été créés à partir de la commande `git add -p`)
+
+> git diff <commit2> <commit1> -- contact.yaml
