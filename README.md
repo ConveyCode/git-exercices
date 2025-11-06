@@ -35,7 +35,7 @@ voiture:
   modele: Clio
 ```
 
-Et société `societe.yaml` :
+Et le fichier `societe.yaml` :
 
 ```
 societe:
@@ -48,6 +48,8 @@ Créer les 2 fichiers en premier, puis créer 2 commits (un par fichier) avec co
 ## Utiliser les ajouts partiels
 
 Dans le fichier `contact.yaml`, remplacer le prénom `Jean` par `Eric` et la ville `Paris` par `Bordeaux`.
+
+Utiliser `git add -p contact.yaml` pour ajouter sélectivement chaque modification.
 
 Créer 2 commits (1 pour chaque ligne modifiée) avec comme messages : `fix(contact): prenom` et `fix(contact): ville`
 
@@ -71,12 +73,14 @@ Attention sur zsh et bash (et donc Git Bash), il faut échapper le caractère `!
 
 ## Revenir en arrière
 
-Utiliser la commande `git reset HEAD~1 --hard` pour annuler le dernier commit et faire réapparaitre le fichier.
+Utiliser la commande `git reset HEAD~1 --hard` pour annuler le dernier commit et faire réapparaître le fichier.
+
+*(Attention : `--hard` supprime définitivement les modifications non commitées)*
 
 ## Afficher des différences
 
 Utiliser la commande `git show` pour afficher le patch du dernier commit
 
-Utiliser la commande `git diff` pour afficher les 2 derniers commits qui portent sur `contact.yaml` (ceux qui ont été créés à partir de la commande `git add -p`)
+Utiliser la commande `git diff` pour afficher les différences entre les 2 commits qui ont modifié `contact.yaml` (ceux qui ont été créés à partir de la commande `git add -p`)
 
 > git diff commit2 commit1 -- contact.yaml
